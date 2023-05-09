@@ -1,0 +1,248 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.0.2 (Python 3.11.3 on win32)" generated="20230509 14:15:19.090" rpa="false" schemaversion="3">
+<suite id="s1" name="Login Valid" source="D:\Project\project\Adsesy_robot\testcases\loginScreen\login_valid.robot">
+<test id="s1-t1" name="TC3: Both null" line="24">
+<kw name="Open browser Adsesy" library="common_use" type="SETUP">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>https://test.adsesy.com/login/</arg>
+<arg>chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20230509 14:15:19.270" level="INFO">Opening browser 'chrome' to base url 'https://test.adsesy.com/login/'.</msg>
+<msg timestamp="20230509 14:15:19.276" level="INFO">Applicable driver not found; attempting to install with Selenium Manager (Beta)</msg>
+<status status="PASS" starttime="20230509 14:15:19.269" endtime="20230509 14:15:27.275"/>
+</kw>
+<kw name="Wait until element is visibled on the screen" library="element_common">
+<arg>${btn_logIn}</arg>
+<kw name="Wait Until Keyword Succeeds" library="BuiltIn">
+<arg>${timeout}</arg>
+<arg>${time_retry}</arg>
+<arg>Wait Until Element Is Visible</arg>
+<arg>${xpath}</arg>
+<arg>${timeout}</arg>
+<arg>error= Cannot find ${xpath} element</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${xpath}</arg>
+<arg>${timeout}</arg>
+<arg>error= Cannot find ${xpath} element</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20230509 14:15:27.276" endtime="20230509 14:15:27.339"/>
+</kw>
+<status status="PASS" starttime="20230509 14:15:27.276" endtime="20230509 14:15:27.339"/>
+</kw>
+<status status="PASS" starttime="20230509 14:15:27.275" endtime="20230509 14:15:27.339"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20230509 14:15:27.339" endtime="20230509 14:15:27.462"/>
+</kw>
+<status status="PASS" starttime="20230509 14:15:19.269" endtime="20230509 14:15:27.462"/>
+</kw>
+<kw name="Click on element on the screen" library="element_common">
+<arg>${txtbox_Email}</arg>
+<kw name="Wait until element is visibled on the screen" library="element_common">
+<arg>${xpath}</arg>
+<kw name="Wait Until Keyword Succeeds" library="BuiltIn">
+<arg>${timeout}</arg>
+<arg>${time_retry}</arg>
+<arg>Wait Until Element Is Visible</arg>
+<arg>${xpath}</arg>
+<arg>${timeout}</arg>
+<arg>error= Cannot find ${xpath} element</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${xpath}</arg>
+<arg>${timeout}</arg>
+<arg>error= Cannot find ${xpath} element</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20230509 14:15:27.467" endtime="20230509 14:15:27.489"/>
+</kw>
+<status status="PASS" starttime="20230509 14:15:27.466" endtime="20230509 14:15:27.489"/>
+</kw>
+<status status="PASS" starttime="20230509 14:15:27.465" endtime="20230509 14:15:27.490"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${xpath}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230509 14:15:27.490" level="INFO">Clicking element '//input[@placeholder='Email']'.</msg>
+<status status="PASS" starttime="20230509 14:15:27.490" endtime="20230509 14:15:27.525"/>
+</kw>
+<status status="PASS" starttime="20230509 14:15:27.464" endtime="20230509 14:15:27.525"/>
+</kw>
+<kw name="Input text into element" library="element_common">
+<arg>${txtbox_Email}</arg>
+<arg>${EMPTY}</arg>
+<kw name="Wait until element is visibled on the screen" library="element_common">
+<arg>${xpath}</arg>
+<kw name="Wait Until Keyword Succeeds" library="BuiltIn">
+<arg>${timeout}</arg>
+<arg>${time_retry}</arg>
+<arg>Wait Until Element Is Visible</arg>
+<arg>${xpath}</arg>
+<arg>${timeout}</arg>
+<arg>error= Cannot find ${xpath} element</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${xpath}</arg>
+<arg>${timeout}</arg>
+<arg>error= Cannot find ${xpath} element</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20230509 14:15:27.528" endtime="20230509 14:15:27.539"/>
+</kw>
+<status status="PASS" starttime="20230509 14:15:27.527" endtime="20230509 14:15:27.539"/>
+</kw>
+<status status="PASS" starttime="20230509 14:15:27.527" endtime="20230509 14:15:27.539"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${xpath}</arg>
+<arg>${text}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230509 14:15:27.539" level="INFO">Typing text '' into text field '//input[@placeholder='Email']'.</msg>
+<status status="PASS" starttime="20230509 14:15:27.539" endtime="20230509 14:15:27.578"/>
+</kw>
+<status status="PASS" starttime="20230509 14:15:27.527" endtime="20230509 14:15:27.578"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230509 14:15:32.578" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" starttime="20230509 14:15:27.578" endtime="20230509 14:15:32.578"/>
+</kw>
+<kw name="Click on element on the screen" library="element_common">
+<arg>${txtbox_Password}</arg>
+<kw name="Wait until element is visibled on the screen" library="element_common">
+<arg>${xpath}</arg>
+<kw name="Wait Until Keyword Succeeds" library="BuiltIn">
+<arg>${timeout}</arg>
+<arg>${time_retry}</arg>
+<arg>Wait Until Element Is Visible</arg>
+<arg>${xpath}</arg>
+<arg>${timeout}</arg>
+<arg>error= Cannot find ${xpath} element</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${xpath}</arg>
+<arg>${timeout}</arg>
+<arg>error= Cannot find ${xpath} element</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20230509 14:15:32.583" endtime="20230509 14:15:32.603"/>
+</kw>
+<status status="PASS" starttime="20230509 14:15:32.582" endtime="20230509 14:15:32.603"/>
+</kw>
+<status status="PASS" starttime="20230509 14:15:32.581" endtime="20230509 14:15:32.603"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${xpath}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230509 14:15:32.604" level="INFO">Clicking element '//input[@type='password']'.</msg>
+<status status="PASS" starttime="20230509 14:15:32.603" endtime="20230509 14:15:32.633"/>
+</kw>
+<status status="PASS" starttime="20230509 14:15:32.580" endtime="20230509 14:15:32.633"/>
+</kw>
+<kw name="Input text into element" library="element_common">
+<arg>${txtbox_Password}</arg>
+<arg>${EMPTY}</arg>
+<kw name="Wait until element is visibled on the screen" library="element_common">
+<arg>${xpath}</arg>
+<kw name="Wait Until Keyword Succeeds" library="BuiltIn">
+<arg>${timeout}</arg>
+<arg>${time_retry}</arg>
+<arg>Wait Until Element Is Visible</arg>
+<arg>${xpath}</arg>
+<arg>${timeout}</arg>
+<arg>error= Cannot find ${xpath} element</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${xpath}</arg>
+<arg>${timeout}</arg>
+<arg>error= Cannot find ${xpath} element</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20230509 14:15:32.635" endtime="20230509 14:15:32.649"/>
+</kw>
+<status status="PASS" starttime="20230509 14:15:32.635" endtime="20230509 14:15:32.649"/>
+</kw>
+<status status="PASS" starttime="20230509 14:15:32.634" endtime="20230509 14:15:32.649"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${xpath}</arg>
+<arg>${text}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230509 14:15:32.650" level="INFO">Typing text '' into text field '//input[@type='password']'.</msg>
+<status status="PASS" starttime="20230509 14:15:32.649" endtime="20230509 14:15:32.686"/>
+</kw>
+<status status="PASS" starttime="20230509 14:15:32.634" endtime="20230509 14:15:32.686"/>
+</kw>
+<kw name="Get WebElements" library="SeleniumLibrary">
+<var>${err}</var>
+<arg>//div[@class="el-form-item__error"]</arg>
+<doc>Returns a list of WebElement objects matching the ``locator``.</doc>
+<msg timestamp="20230509 14:15:32.695" level="INFO">${err} = []</msg>
+<status status="PASS" starttime="20230509 14:15:32.686" endtime="20230509 14:15:32.695"/>
+</kw>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${text}</var>
+<arg>${err}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20230509 14:15:33.580" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-1.png"&gt;&lt;img src="selenium-screenshot-1.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg timestamp="20230509 14:15:33.580" level="FAIL">IndexError: list index out of range</msg>
+<status status="FAIL" starttime="20230509 14:15:32.695" endtime="20230509 14:15:33.605"/>
+</kw>
+<kw name="Create List" library="BuiltIn">
+<var>${list_err}</var>
+<arg>${text}</arg>
+<doc>Returns a list containing given items.</doc>
+<status status="NOT RUN" starttime="20230509 14:15:33.606" endtime="20230509 14:15:33.606"/>
+</kw>
+<kw name="Should Be Equal" library="BuiltIn">
+<arg>${list_err}[0]</arg>
+<arg>Vui lòng nhập email</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="NOT RUN" starttime="20230509 14:15:33.606" endtime="20230509 14:15:33.607"/>
+</kw>
+<kw name="Should Be Equal" library="BuiltIn">
+<arg>${list_err}[1]</arg>
+<arg>Vui lòng nhập password</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="NOT RUN" starttime="20230509 14:15:33.607" endtime="20230509 14:15:33.607"/>
+</kw>
+<kw name="Close the browser" library="common_use" type="TEARDOWN">
+<kw name="Run Keyword If Test Failed" library="BuiltIn">
+<arg>Capture Page Screenshot</arg>
+<doc>Runs the given keyword with the given arguments, if the test failed.</doc>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20230509 14:15:34.440" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-2.png"&gt;&lt;img src="selenium-screenshot-2.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20230509 14:15:33.607" endtime="20230509 14:15:34.440"/>
+</kw>
+<status status="PASS" starttime="20230509 14:15:33.607" endtime="20230509 14:15:34.440"/>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20230509 14:15:34.440" endtime="20230509 14:15:36.528"/>
+</kw>
+<status status="PASS" starttime="20230509 14:15:33.607" endtime="20230509 14:15:36.529"/>
+</kw>
+<tag>null</tag>
+<status status="FAIL" starttime="20230509 14:15:19.268" endtime="20230509 14:15:36.530">IndexError: list index out of range</status>
+</test>
+<status status="FAIL" starttime="20230509 14:15:19.091" endtime="20230509 14:15:36.534"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="0" fail="1" skip="0">null</stat>
+</tag>
+<suite>
+<stat pass="0" fail="1" skip="0" id="s1" name="Login Valid">Login Valid</stat>
+</suite>
+</statistics>
+<errors>
+<msg timestamp="20230509 14:15:19.264" level="ERROR">Error in file 'D:\Project\project\Adsesy_robot\common\resource_common.robot' on line 10: Resource file '..\..\testcasesloginScreenlogin_invalid.robot' does not exist.</msg>
+<msg timestamp="20230509 14:15:19.266" level="ERROR">Error in file 'D:\Project\project\Adsesy_robot\testcases\loginScreen\login_invalid.robot' on line 6: Setting 'Test Setup' is not allowed in resource file.</msg>
+<msg timestamp="20230509 14:15:19.267" level="ERROR">Error in file 'D:\Project\project\Adsesy_robot\testcases\loginScreen\login_invalid.robot' on line 7: Setting 'Task Teardown' is not allowed in resource file.</msg>
+<msg timestamp="20230509 14:15:19.267" level="ERROR">Error in file 'D:\Project\project\Adsesy_robot\testcases\loginScreen\login_invalid.robot' on line 9: Setting 'Test Template' is not allowed in resource file.</msg>
+<msg timestamp="20230509 14:15:19.267" level="ERROR">Error in file 'D:\Project\project\Adsesy_robot\testcases\loginScreen\login_valid.robot' on line 4: Error in file 'D:\Project\project\Adsesy_robot\testcases\loginScreen\login_invalid.robot' on line 11: Resource file with 'Test Cases' section is invalid.</msg>
+</errors>
+</robot>
