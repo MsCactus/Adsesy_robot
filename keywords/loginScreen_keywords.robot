@@ -21,20 +21,20 @@ Input username and password
 
 Get OTP from ruu.kr
     [Arguments]    ${mail}
-    Open Browser    http://ruu.kr/    chrome    aliasB
+    Open Browser    http://ruu.kr/    chrome    ruu.kr
     ${all_alias}=    Get Browser Aliases
-    Wait until element is visibled on the screen    ${txtbox_ibputMail}
-    Input text into element    ${txtbox_ibputMail}    ${mail}
+    Wait until element is visibled on the screen    ${txtbox_inputMail}
+    Input text into element    ${txtbox_inputMail}    ${mail}
     Sleep    5s
     Click on element on the screen    ${mailList}
     Sleep    10s
     Click on element on the screen    ${getListMail}
     Sleep    10s
-    ${otp}    Get Text    ${otp_ruu}
+    ${otp}=    Get Text    ${otp_ruu}
     Close Browser
     RETURN    ${otp}
 
 Back to page and paste OTP
     [Arguments]    ${otp}
-    Switch Browser    aliasA    
+    Switch Browser    adsesy
     Input text into element    ${txtbox_OTP}    ${otp}

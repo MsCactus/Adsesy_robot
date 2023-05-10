@@ -5,7 +5,7 @@ Resource    ../common/resource_common.robot
 
 *** Keywords ***
 Open browser Adsesy
-    Open Browser    https://test.adsesy.com/login/    chrome    aliasA
+    Open Browser    https://test.adsesy.com/login/    chrome    adsesy
     Wait until element is visibled on the screen    ${btn_logIn}
     Maximize Browser Window
 

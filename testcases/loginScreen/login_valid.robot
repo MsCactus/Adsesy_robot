@@ -39,3 +39,4 @@ TC3: Valid login
     ${otp}=    Get OTP from ruu.kr    ${mail}
     Back to page and paste OTP    ${otp}
     Click on element on the screen    ${btn_Send}
+
